@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metropolis — City Management Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🏙️ Metropolis</h1>
+    <div class="stats">
+      <div class="stat" id="stat-money" title="City treasury">💰 $<span id="money">25,000</span></div>
+      <div class="stat" title="Monthly net income">📈 <span id="income">+$0</span>/mo</div>
+      <div class="stat" title="Residents">👥 <span id="population">0</span></div>
+      <div class="stat" title="Housing capacity">🏠 <span id="capacity">0</span></div>
+      <div class="stat" title="Jobs / workforce">💼 <span id="jobs">0</span>/<span id="workforce">0</span></div>
+      <div class="stat" id="stat-power" title="Power supply vs demand">⚡ <span id="power">0/0</span></div>
+      <div class="stat" title="Happiness">🙂 <span id="happiness">55</span>%</div>
+      <div class="stat" title="Current rank">🏅 <span id="rank">Outpost</span></div>
+      <div class="stat" title="Date">📅 <span id="date">Jan 2026</span></div>
+    </div>
+    <div class="controls">
+      <button id="btn-pause" title="Pause">⏸</button>
+      <button id="btn-play" class="active" title="Normal speed">▶</button>
+      <button id="btn-fast" title="Fast speed">⏩</button>
+      <span class="spacer"></span>
+      <button id="btn-save" title="Save now">💾 Save</button>
+      <button id="btn-new" title="Start a new city">🔄 New</button>
+    </div>
+  </header>
+
+  <main>
+    <aside id="toolbar">
+      <h2>Build</h2>
+      <div id="tools"></div>
+      <div id="tile-info">
+        <h2>Tile</h2>
+        <div id="tile-info-body">Hover a tile…</div>
+      </div>
+    </aside>
+
+    <section id="map-wrap">
+      <div id="map"></div>
+    </section>
+
+    <aside id="log-panel">
+      <h2>City news</h2>
+      <div id="log"></div>
+    </aside>
+  </main>
+
+  <footer>
+    <p>Tip: buildings (except parks &amp; wind turbines) need a road next to them · keep power supply above demand · services and parks raise happiness nearby.</p>
+  </footer>
+
+  <script src="game.js"></script>
+</body>
+</html>
